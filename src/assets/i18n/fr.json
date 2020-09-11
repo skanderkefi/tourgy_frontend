@@ -1,0 +1,45 @@
+{
+    "LOGIN": {
+        "EMAIL": "VOTRE EMAIL",
+        "PWD": "VOTRE MOT DE PASSE ",
+        "BTN":"SE CONNECTER",
+        "NV":"nouveau ?"
+    
+    },
+    "AID": {
+        "TITLE": "BIENVENUE A TOURGY !",
+        "Q1": "Comment gagner beaucoup de temps ?",
+        "RESPONSE": "avec nous , vous pouvez gagner beaucoup de temps"
+
+    },
+    "NAV": {
+        "CHMP1": "Enregistrement",
+        "CHMP2": "Aide",
+        "SELECT": "Change langue"
+
+    },
+    "HOME": {
+    "PH1": "Gain du temps",
+    "DEFPH1": "Avec nous , vous allez gagner du temps ",
+    "PH2": "Ne pas se perdre",
+    "DEFPH2": "Avec nous , vous apprendrez toutes les places ",
+    "PH3": "Profiter le maximum",
+    "DEFPH3": "Avec nous , vous allez profiter le maximum"
+}
+,
+    "RGS":{
+    "NM": "Nom",
+    "PNM": "Prenom",
+    "EML": "Adresse email ",
+    "PW": "Mot de passe",
+    "CV": "choisissez votre cv",
+    "BTN":"S'inscrire",
+    "REQ":"Obligatoire",
+    "MIN":"Longueur min 3 ",
+    "PLACE":"Disponible à",
+    "AREA":"lettre de motivation"
+    },
+    "CV":{
+        "DISP": "Disponible dans :",
+        "MOTIV": "Lettre de Motivation :"
+    }}

@@ -1,0 +1,83 @@
+<br>
+
+<form #f="ngForm" (submit)="addFct()"  class="form">
+    <mat-form-field >
+        <mat-label class="label" >{{ 'RGS.NM' | translate }}</mat-label>
+        <input  [(ngModel)]='guide.firstName' name="firstName" matInput placeholder="First Name" #fn="ngModel" required minlength="3" maxlength="15"/>
+       <br>
+       <br>
+        <div class="error" *ngIf="fn.errors?.required && fn.touched" >{{ 'RGS.REQ' | translate }} !</div>
+        <div class="error" *ngIf="fn.errors?.minlength && fn.touched" >{{ 'RGS.MIN' | translate }} !</div>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field >
+        <mat-label class="label">{{ 'RGS.PNM' | translate }}</mat-label>
+        <input  [(ngModel)]='guide.lastName' name="lastName" matInput placeholder="Last Name" #ln="ngModel" required minlength="3" maxlength="20" />
+        <br>
+        <br>
+         <div class="error" *ngIf="ln.errors?.required && ln.touched" >{{ 'RGS.REQ' | translate }} !</div>
+         <div class="error" *ngIf="ln.errors?.minlength && ln.touched" >{{ 'RGS.MIN' | translate }} !</div>
+     </mat-form-field>
+     <br>
+    
+    <mat-form-field >
+        <mat-label class="label">{{ 'RGS.EML' | translate }}</mat-label>
+        <input  [(ngModel)]='guide.email' name="email" matInput placeholder="e-mail address" #myemail="ngModel" required minlength="3" maxlength="35" placeholder="Ex. pat@example.com"/>
+        <br>
+        <br>
+         <div class="error" *ngIf="myemail.errors?.required && myemail.touched" >{{ 'RGS.REQ' | translate }} !</div>
+         <div class="error" *ngIf="myemail.errors?.minlength && myemail.touched" >{{ 'RGS.MIN' | translate }} !</div>
+     </mat-form-field>
+     <br>
+    <mat-form-field >
+        <mat-label class="label">{{ 'RGS.PW' | translate }}</mat-label>
+        <input type="password"  [(ngModel)]='guide.mdp' name="password" matInput placeholder="Password" #pwd="ngModel" required minlength="3" maxlength="50"/>
+        <br>
+        <br>
+         <div class="error" *ngIf="pwd.errors?.required && pwd.touched" >{{ 'RGS.REQ' | translate }} !</div>
+         <div class="error" *ngIf="pwd.errors?.minlength && pwd.touched" >{{ 'RGS.MIN' | translate }} !</div>
+     </mat-form-field>
+     <br>
+     <mat-form-field >
+      <mat-label class="label">{{ 'RGS.PLACE' | translate }}</mat-label>
+      <input type="text"
+             aria-label="Number"
+             matInput
+             [formControl]="myControl"
+             name="autocomp"
+             [matAutocomplete]="auto"
+             [(ngModel)]='guide.dispo'
+             required
+             >
+      <mat-autocomplete #auto="matAutocomplete"  >
+        <mat-option *ngFor="let place of filteredPlaces | async" [value]="place">
+          {{place}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    <br>
+    
+    <mat-form-field appearance="fill">
+      <mat-label class="label">{{ 'RGS.AREA' | translate }}</mat-label>
+      <textarea matInput [(ngModel)]='guide.motiv' name="motivation" ></textarea>
+    </mat-form-field>
+     
+ <!-- <label for="img" class="label">{{ 'RGS.CV' | translate }}</label>
+  <input  type="file" id="img" name="img" class="label" (change)="onFileChanged($event)"> -->
+
+ <button mat-raised-button class="btn" *ngIf="!pwd.errors?.required && !myemail.errors?.required && !ln.errors?.required && !fn.errors?.required && !pwd.errors?.minlength && !myemail.errors?.minlength && !ln.errors?.minlength && !fn.errors?.minlength" >{{ 'RGS.BTN' | translate }}</button>
+   
+</form>
+
+<form>
+    <div class="form-group">
+      <label for="sel1" style="font-style: italic;color: rgb(88, 206, 206);margin-left: 90%;">{{ 'NAV.SELECT' | translate }}:</label>
+      <select class="form-control" id="sel1" #langSelect (change)="translate.use(langSelect.value)" style="width: 63px;color: rgb(88, 206, 206);margin-left: 95%;">
+        <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+      </select>
+   </div>
+  </form>
+
+
+  

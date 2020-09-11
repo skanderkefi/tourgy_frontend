@@ -1,0 +1,32 @@
+<br>
+
+<h1 id="welcome">{{'AID.TITLE' | translate}} </h1>
+<br>
+<br>
+<br>
+<br> 
+<div style="font-size: medium;  text-align: center;">
+<b> {{'AID.Q1' | translate}}</b>
+<br> <br>
+<p> {{'AID.RESPONSE' | translate}}</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<form>
+    <div class="form-group">
+      <label for="sel1" style="font-style: italic;color: rgb(88, 206, 206);margin-left: 90%;">{{ 'NAV.SELECT' | translate }}:</label>
+      <select class="form-control" id="sel1" #langSelect (change)="translate.use(langSelect.value)" style="width: 63px;color: rgb(88, 206, 206);margin-left: 95%;">
+        <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+      </select>
+   </div>
+  </form>

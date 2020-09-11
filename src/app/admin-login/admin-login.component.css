@@ -1,0 +1,27 @@
+.form{
+    padding-left: 40%;
+  }
+  .btn{
+    background-color: rgb(235, 105, 45);
+    color: white;font-style: italic;
+    font-size: medium;
+    
+  }
+  .input{
+      width: 50%;
+  }
+  .lien{
+    color: rgb(236, 82, 11); 
+    font-style:oblique;
+    font-size: large;
+  }
+  #sel1{
+    width: 63px;
+    color: rgb(88, 206, 206);
+    margin-left: 95%;
+  }
+  #labelselect{
+    font-style: italic;
+    color: rgb(88, 206, 206);
+    margin-left: 90%;
+  }

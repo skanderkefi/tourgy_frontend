@@ -1,0 +1,42 @@
+<br>  
+<br>
+<br>
+<br> 
+<form #f="ngForm" (submit)="loginF()"  class="form">
+    <mat-form-field class="input">
+        <mat-label class="label" style="color: rgb(236, 82, 11) ;">{{ 'LOGIN.EMAIL' | translate }}</mat-label>
+        <input  [(ngModel)]='login.email' name="firstName" matInput  #fn="ngModel" placeholder="Ex. pat@example.com"   />
+       <br>
+       <br>
+      </mat-form-field>
+    <br>
+
+    <mat-form-field class="input">
+        <mat-label class="label" style="color: rgb(236, 82, 11) ;">{{ 'LOGIN.PWD' | translate }}</mat-label>
+        <input type="password" [(ngModel)]='login.mdp' name="lastName" matInput  #ln="ngModel"    />
+        <br>
+        <br>
+    </mat-form-field>
+    <br>
+    <br>
+    <button mat-raised-button class="btn" >{{ 'LOGIN.BTN' | translate }}</button>
+    <br>
+    <br>
+    <br>
+     <br>
+   </form>
+   
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+   <form>
+    <div class="form-group">
+      <label for="sel1" id="labelselect" >{{ 'NAV.SELECT' | translate }}:</label>
+      <select class="form-control" id="sel1" #langSelect (change)="translate.use(langSelect.value)" >
+        <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+      </select>
+   </div>
+  </form>

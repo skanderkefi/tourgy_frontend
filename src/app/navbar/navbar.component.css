@@ -1,0 +1,23 @@
+.myItems{
+    color: rgb(88, 206, 206);
+    font-size: medium;
+}
+
+#selectLanguage{
+        color: rgb(88, 206, 206);
+        width: 125px;
+        padding: 15px 15px;
+        cursor: pointer;
+        margin-left: 230%;
+        text-align: left;
+        padding: 15px 15px;
+        font-size: 18px;
+        font-style: italic;
+        border-radius: 50px;
+
+}
+
+.nav{
+    color:rgb(88, 206, 206);
+}
+

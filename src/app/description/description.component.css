@@ -1,0 +1,19 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th{
+    text-align: center;
+    padding: 10px;
+    color: antiquewhite;
+    font-size: x-large;
+    color: rgb(235, 105, 45);
+
+  }
+  td{
+    text-align: center;
+    padding: 10px;
+    color: rgb(226, 139, 99);
+    font-size: large;
+  }

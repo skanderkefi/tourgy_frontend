@@ -1,0 +1,85 @@
+<br>
+<div class="container">
+  <div class="row">
+<div class="col-md-5">
+<div class="card-container">
+    <div class="card">
+      <div class="front">
+        <div class="cover">
+          <img src="../assets/rotating_card_thumb2.png">
+        </div>
+        <div class="user">
+          <img class="img-circle" src="../assets/{{guidedetails.lastName}}.png">
+        </div>
+        <div class="content">
+          <div class="main">
+            <h3 class="name"> {{guidedetails.firstName}} {{guidedetails.lastName}}</h3>
+            <p class="profession">{{guidedetails.email}}</p>
+          </div>
+          <div class="footer">
+            <i class="fa fa-mail-forward"></i> Auto Rotation
+          </div>
+        </div>
+      </div> 
+      <div class="back">
+        <div class="header">
+          <h5 class="motto">{{guidedetails.firstName}} {{guidedetails.lastName}}</h5>
+        </div>
+        <div class="content">
+          <div class="main">
+            <h4 class="text-center">{{ 'CV.DISP' | translate }}</h4>
+            <p class="text-center">{{guidedetails.dispo}}</p>
+  
+            <div class="stats-container">
+              <div class="stats">
+                <h4></h4>
+                <p>
+                </p>
+              </div>
+              <div class="stats">
+                <h4>{{ 'CV.MOTIV' | translate }}</h4>
+                <p>
+                  {{guidedetails.motiv}}
+                </p>
+              </div>
+              <div class="stats">
+                <h4></h4>
+                <p>
+                </p>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+        <div class="footer">
+          <div class="social-links text-center">
+            <button class="btn btn-success" (click)="Accepter()" >Accepter</button>
+            <button class="btn btn-danger" (click)="Refuser()">Refuser</button>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+  </div>
+
+
+
+<div class="col-md-3" style="margin-top: 105px;">
+  <ul class="list-group" list-group-flush>
+    <li class="list-group-item list-group-item-action list-group-item-info"
+     *ngFor='let guide of guides' (click)="details(guide)">
+     <img src="../assets/avatar.jpg" style="width: 50px;height: 50px;border-radius: 50px;"> {{ guide.firstName | titlecase }} {{ guide.lastName | uppercase }}</li>
+  </ul>
+  </div>
+</div>
+</div>
+
+
+   <form>
+    <div class="form-group">
+      <label for="sel1" id="labelselect" >{{ 'NAV.SELECT' | translate }}:</label>
+      <select class="form-control" id="sel1" #langSelect (change)="translate.use(langSelect.value)" >
+        <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+      </select>
+   </div>
+  </form>

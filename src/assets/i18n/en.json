@@ -1,0 +1,48 @@
+{
+    "LOGIN": {
+    "EMAIL": "YOUR EMAIL",
+    "PWD": "YOUR PASSWORD",
+    "BTN":"SIGN IN",
+    "NV":"new ?"
+
+},
+
+    "AID": {
+        "TITLE": "WELCOME TO TOURGY !",
+        "Q1": "How to gain time ?",
+        "RESPONSE": "With us, you'll gain time"
+
+    },
+
+    "NAV": {
+        "CHMP1": "Registering",
+        "CHMP2": "Help",
+        "SELECT": "Change language"
+
+    },
+    "HOME": {
+    "PH1": "Time saving",
+    "DEFPH1": "With us , you'll save your Time ",
+    "PH2": "no get lost",
+    "DEFPH2": "With us , you'll not get lost ",
+    "PH3": "make the most",
+    "DEFPH3": "With us , you'll make the most "
+},
+    "RGS":{
+    "NM": "First Name",
+    "PNM": "Last Name",
+    "EML": "Email Address ",
+    "PW": "Password",
+    "CV": "Select your cv",
+    "BTN":"Sign up",
+    "REQ":"Required",
+    "MIN":"Min lenght 3 ",
+    "PLACE":"Disponible in",
+    "AREA":"cover letter"
+
+    },
+    "CV":{
+        "DISP": "Disponible in :",
+        "MOTIV": "Cover letter :"
+    }
+} 

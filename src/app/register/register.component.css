@@ -1,0 +1,33 @@
+
+  .form{
+    padding-left: 40%;
+  }
+
+  .label{
+     color:rgb(235, 105, 45);
+     font-style: italic;
+     font-size: medium;
+  }
+
+  .btn{
+    background-color: rgb(235, 105, 45);
+    color: white;font-style: italic;
+    font-size: medium;
+  }
+
+  .error{
+     font-size: large;
+     color: darkred;
+     font-style: italic;
+  }
+
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  

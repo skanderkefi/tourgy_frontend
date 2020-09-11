@@ -1,0 +1,61 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+    <table>
+      <tr>
+      <th>{{ 'HOME.PH1' | translate }} </th>
+      <th>{{ 'HOME.PH2' | translate }}</th>
+      <th>{{ 'HOME.PH3' | translate }}</th>
+      </tr>
+      <tr>
+      <td><i>{{ 'HOME.DEFPH1' | translate }}</i></td>
+      <td><i>{{ 'HOME.DEFPH2' | translate }}</i></td>
+      <td><i>{{ 'HOME.DEFPH3' | translate }}</i></td>
+      </tr>
+    </table>
+
+
+    <br>
+<br>
+<br>
+<br>
+<br>
+
+
+    <!-- <div>
+  <label>
+    {{ 'NAV.SELECT' | translate }}
+    <select #langSelect (change)="translate.use(langSelect.value)">
+      <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+    </select>
+  </label>
+</div> -->
+<!-- <mat-form-field id="selectLanguage" appearance="fill">
+  <mat-label>{{ 'NAV.SELECT' | translate }}</mat-label>
+  <mat-select #langSelect (change)="translate.use(langSelect.value)">
+    <mat-option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</mat-option>
+  </mat-select>
+</mat-form-field>  -->
+
+<form>
+  <div class="form-group">
+    <label for="sel1" style="font-style: italic;color: rgb(88, 206, 206);margin-left: 90%;">{{ 'NAV.SELECT' | translate }}:</label>
+    <select class="form-control" id="sel1" #langSelect (change)="translate.use(langSelect.value)" style="width: 63px;color: rgb(88, 206, 206);margin-left: 95%;">
+      <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+    </select>
+ </div>
+</form>
+    
